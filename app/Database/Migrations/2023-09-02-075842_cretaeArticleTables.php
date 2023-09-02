@@ -15,10 +15,31 @@ class cretaeArticleTables extends Migration
                 'unsigned' => true,
                 'auto_increment' => true
             ],
-            'content' => [
+            'article_title' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255
+            ],
+            'article_slug' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'unique' => true
+            ],
+            'article_content' => [
                 'type' => 'TEXT',
             ],
-            'created_at' => ['type' => 'DATETIME']
+            'article_status' => [
+                'type' => 'ENUM',
+                'constraint' => ['publish', 'pending', 'draft'],
+                'default' => 'pending'
+            ],
+            'created_at' =>
+            [
+                'type' => 'DATETIME'
+            ],
+            'updated_at' =>
+            [
+                'type' => 'DATETIME'
+            ]
         ]);
         $this->forge->addKey('article_id', true);
         $this->forge->createTable('articles', true);

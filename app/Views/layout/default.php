@@ -18,7 +18,7 @@
   <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
   <meta name="author" content="Łukasz Holeczek">
   <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-  <title>CoreUI Free Bootstrap Admin Template</title>
+  <title><?= $title; ?> - Article App</title>
   <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url(); ?>coreUi/assets/favicon/favicon-16x16.png">
   <!-- Vendors styles-->
   <!-- css_script  -->
@@ -43,7 +43,7 @@
     <!-- end footer  -->
   </div>
   <!-- js script  -->
-  <?= $this->include('layout\partial\js_scsript'); ?>
+  <?= $this->include('layout/partial/js_scsript'); ?>
 </body>
 
 </html>
