@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Articles extends Migration
+class cretaeArticleTables extends Migration
 {
     public function up()
     {
@@ -26,6 +26,6 @@ class Articles extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('articles', true);
     }
 }
